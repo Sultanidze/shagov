@@ -1,11 +1,13 @@
 $(document).ready(function(){
-	//new in ads slider initialization
-	var $sliderMain = $("#sliderMain").slick({
+	//index.html slider initialization
+	var $sliderMain = $("#sliderain").slick({
 		arrows: false,
 		infinite: false,
 		speed: 1000,
 		slidesToShow: 1,
 		slidesToScroll: 1,
+		// autoplay: true,
+		// autoplaySpeed: 6500,
 		// responsive: [{
 		// 		breakpoint: 992,
 		// 		settings: {
@@ -32,5 +34,10 @@ $(document).ready(function(){
 	$sliderMainNextBtn.click(function(event){
 		event.preventDefault();
 		$sliderMain.slick("slickNext");
+	});
+// show-hide navigation menu on tablets
+	$("#MenuToggleBtn").click(function(){
+		$(this).toggleClass("b-toggler_active");
+		$("#navigation").toggleClass("b-header__nav_opened");
 	});
 })
